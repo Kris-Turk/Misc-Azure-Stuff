@@ -2,7 +2,7 @@
 
 # Securing All Subnets
 
-[TOC]
+
 
 ## Introduction
 
