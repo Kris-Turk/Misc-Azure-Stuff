@@ -1,4 +1,3 @@
-![kristurk.com](../img/kristurk_logo.png)
 
 # Securing All Subnets
 
@@ -6,6 +5,7 @@
   - [Introduction](#introduction)
   - [Usage/Instructions](#usageinstructions)
 
+![kristurk.com](../img/kristurk_logo.png)
 
 ## Introduction
 
@@ -42,6 +42,3 @@ foreach($bs in $badSubnets){
 
 }
 ```
-
-
-
