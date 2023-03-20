@@ -2,7 +2,10 @@
 
 # Securing All Subnets
 
-[TOC]
+- [Securing All Subnets](#securing-all-subnets)
+  - [Introduction](#introduction)
+  - [Usage/Instructions](#usageinstructions)
+
 
 ## Introduction
 
