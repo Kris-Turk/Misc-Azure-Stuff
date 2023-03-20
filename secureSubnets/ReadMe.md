@@ -1,11 +1,10 @@
+![kristurk.com](../img/kristurk_logo.png)
 
 # Securing All Subnets
 
 - [Securing All Subnets](#securing-all-subnets)
   - [Introduction](#introduction)
   - [Usage/Instructions](#usageinstructions)
-
-![kristurk.com](../img/kristurk_logo.png)
 
 ## Introduction
 
