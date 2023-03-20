@@ -1,8 +1,8 @@
-![](C:\Repos\KrisTurk\Misc-Azure-Stuff\img\kristurk_logo.png)
+![kristurk.com](../img/kristurk_logo.png)
 
 # Securing All Subnets
 
-
+[TOC]
 
 ## Introduction
 
