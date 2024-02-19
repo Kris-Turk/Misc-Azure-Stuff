@@ -1,4 +1,4 @@
-$badSubnets = (Get-AzVirtualNetwork | Get-AzVirtualNetworkSubnetConfig) | Where-Object { $_.networksecuritygroup -eq $null }
+$badSubnets = ((Get-AzVirtualNetwork | Get-AzVirtualNetworkSubnetConfig) | Where-Object { $_.networksecuritygroup -eq $null }).name
 
 
 foreach($bs in $badSubnets){
