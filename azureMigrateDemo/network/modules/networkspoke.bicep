@@ -2,7 +2,7 @@ param virtualNetworkName string
 param addressSpaces array
 param subnets array
 param bastionSubnetAddressSpace string
-param dnsServers array
+// param dnsServers array
 param corpAddressRanges array
 param location string = resourceGroup().location
 param peeredvNet_name string

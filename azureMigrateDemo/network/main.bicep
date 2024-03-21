@@ -38,9 +38,10 @@ param spokesubnets array = [
   }
 ]
 
-param dnsServers array = [
-  '1.1.1.1'
-]
+// param dnsServers array = [
+//   '10.210.0.4'
+// ]
+
 param corpAddressRanges array = [
   '10.210.0.0/16'
   '121.79.240.60'
@@ -137,7 +138,7 @@ module vnetSpoke1Module './modules/networkspoke.bicep' = {
     subnets: spokesubnets
     bastionSubnetAddressSpace: bastionSubnetAddressSpace
     corpAddressRanges: corpAddressRanges
-    dnsServers: dnsServers
+    // dnsServers: dnsServers
     peeredvNet_name: hubVirtualNetworkName
     peeredvNet_rg: rgVnetHub.name
     peeredvnet_sub: hubsubid
