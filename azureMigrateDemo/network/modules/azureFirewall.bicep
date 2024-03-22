@@ -107,6 +107,7 @@ resource ruleCollectionGroupOutbound 'Microsoft.Network/firewallPolicies/ruleCol
           {
             ruleType: 'NetworkRule'
             name: 'AllowInternetOutbound'
+            
             destinationAddresses: [
               '*'
             ]
@@ -147,6 +148,7 @@ resource ruleCollectionGroupinbound 'Microsoft.Network/firewallPolicies/ruleColl
               fwPublicIp.properties.ipAddress
             ]
             destinationPorts: [
+              '443'
               '9443'
             ]
             ipProtocols: [

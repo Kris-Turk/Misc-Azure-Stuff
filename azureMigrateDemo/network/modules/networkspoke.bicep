@@ -141,12 +141,14 @@ resource nsg 'Microsoft.Network/networkSecurityGroups@2020-06-01' = [for subnet 
             properties: {
             protocol: 'Tcp'
             sourcePortRange: '*'
-            destinationPortRange: '9443'
             destinationAddressPrefix: '*'
             access: 'Allow'
             priority: 125
             direction: 'Inbound'
-            sourcePortRanges: []
+            sourcePortRanges: [
+              '443'
+              '9443'
+            ]
             destinationPortRanges: []
              sourceAddressPrefixes: corpAddressRanges
              destinationAddressPrefixes: []
