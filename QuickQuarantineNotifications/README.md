@@ -1,5 +1,10 @@
 # Introduction
 
-The code in the repositoring is to help delpy a solution to overcome the 4 hour minimum delay in spam/quarantine notification with Exchange spam digest.
 
-The solution uses a powershell based function app. The app uses a managed identity to authenticate against exchange.
+
+This repo eliminates the 4-hour Microsoft quarantine delay using an Azure function. Watch the video below for setup and usage. Quick, efficient, no-nonsense.
+
+```markdown
+[![IMAGE ALT TEXT HERE](https://i9.ytimg.com/vi/4nFxqh0NsCw/maxresdefault.jpg?v=65fe82cb&sqp=CKSpmrAG&rs=AOn4CLCCgw63wzo6qDlzoB1KxAHg4bPr0g)](https://www.youtube.com/watch?v=4nFxqh0NsCw)
+```
+
