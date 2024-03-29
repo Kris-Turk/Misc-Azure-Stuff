@@ -128,59 +128,76 @@ resource ruleCollectionGroupOutbound 'Microsoft.Network/firewallPolicies/ruleCol
   }
 }
 
-resource ruleCollectionGroupinbound 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2023-09-01' = {
-  name: 'DefaultDnatRuleCollectionGroup'
-  parent: firewallPolicy
-  properties: {
-    priority: 100
-    ruleCollections: [
-      {
-        ruleCollectionType: 'FirewallPolicyNatRuleCollection'
-        action: {
-          type: 'Dnat'
-        }
-        name: 'AzureMigrate'
-        priority: 2000
-        rules: [
-          {
-            ruleType: 'NatRule'
-            destinationAddresses: [
-              fwPublicIp.properties.ipAddress
-            ]
-            destinationPorts: [
-              '443'
-              '9443'
-            ]
-            ipProtocols: [
-              'TCP'
-            ]
-            name: 'AzureMigrate'
-            sourceAddresses: [
-              onpremip
-            ]
-            translatedAddress: '10.210.1.4'
-            translatedPort: '9443'
-          }
-          {
-            ruleType: 'NatRule'
-            destinationAddresses: [
-              fwPublicIp.properties.ipAddress
-            ]
-            destinationPorts: [
-              '445'
-            ]
-            ipProtocols: [
-              'TCP'
-            ]
-            name: 'SMB'
-            sourceAddresses: [
-              onpremip
-            ]
-            translatedAddress: '10.210.1.4'
-            translatedPort: '445'
-          }
-        ]
-      }
-    ]
-  }
-}
+// resource ruleCollectionGroupinbound 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2023-09-01' = {
+//   name: 'DefaultDnatRuleCollectionGroup'
+//   parent: firewallPolicy
+//   properties: {
+//     priority: 100
+//     ruleCollections: [
+//       {
+//         ruleCollectionType: 'FirewallPolicyNatRuleCollection'
+//         action: {
+//           type: 'Dnat'
+//         }
+//         name: 'AzureMigrate'
+//         priority: 2000
+//         rules: [
+//           {
+//             ruleType: 'NatRule'
+//             destinationAddresses: [
+//               fwPublicIp.properties.ipAddress
+//             ]
+//             destinationPorts: [
+//               '9443'
+//             ]
+//             ipProtocols: [
+//               'TCP'
+//             ]
+//             name: 'AzureMigrate'
+//             sourceAddresses: [
+//               onpremip
+//             ]
+//             translatedAddress: '10.210.1.4'
+//             translatedPort: '9443'
+//           }
+//           {
+//             ruleType: 'NatRule'
+//             destinationAddresses: [
+//               fwPublicIp.properties.ipAddress
+//             ]
+//             destinationPorts: [
+//               '443'
+//             ]
+//             ipProtocols: [
+//               'TCP'
+//             ]
+//             name: 'AzureMigrateHTTPS'
+//             sourceAddresses: [
+//               onpremip
+//             ]
+//             translatedAddress: '10.210.1.4'
+//             translatedPort: '443'
+//           }
+//           {
+//             ruleType: 'NatRule'
+//             destinationAddresses: [
+//               fwPublicIp.properties.ipAddress
+//             ]
+//             destinationPorts: [
+//               '445'
+//             ]
+//             ipProtocols: [
+//               'TCP'
+//             ]
+//             name: 'SMB'
+//             sourceAddresses: [
+//               onpremip
+//             ]
+//             translatedAddress: '10.210.1.4'
+//             translatedPort: '445'
+//           }
+//         ]
+//       }
+//     ]
+//   }
+// }

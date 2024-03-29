@@ -145,11 +145,11 @@ resource nsg 'Microsoft.Network/networkSecurityGroups@2020-06-01' = [for subnet 
             access: 'Allow'
             priority: 125
             direction: 'Inbound'
-            sourcePortRanges: [
+            sourcePortRanges: []
+            destinationPortRanges: [
               '443'
               '9443'
             ]
-            destinationPortRanges: []
              sourceAddressPrefixes: corpAddressRanges
              destinationAddressPrefixes: []
            }

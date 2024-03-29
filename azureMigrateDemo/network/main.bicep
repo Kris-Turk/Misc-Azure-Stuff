@@ -44,6 +44,7 @@ param spokesubnets array = [
 
 param corpAddressRanges array = [
   '10.210.0.0/16'
+  '172.16.201.0/24'
   '121.79.240.60'
 ]
 
@@ -122,9 +123,6 @@ module vnetHubModule './modules/hubnetwork.bicep' = {
     bastionSubnetAddressSpace: bastionSubnetAddressSpace   
 
   }
-  dependsOn: [
-    rgVnetHub
-  ]
 }
 
 // deploy virtual network vnet-migrate-aue-01 using module 
@@ -146,7 +144,6 @@ module vnetSpoke1Module './modules/networkspoke.bicep' = {
     firewallPrivateIP: firewallPrivateIP
   }
   dependsOn: [
-    rgVnetSpoke1
     vnetHubModule
   ]
 }
@@ -162,7 +159,7 @@ module vnetSpoke2Module './modules/networkspoke.bicep' = {
     subnets: spoke2subnets
     bastionSubnetAddressSpace: bastionSubnetAddressSpace
     corpAddressRanges: corpAddressRanges
-    dnsServers: dnsServers
+    // dnsServers: dnsServers
     peeredvNet_name: hubVirtualNetworkName
     peeredvNet_rg: rgVnetHub.name
     peeredvnet_sub: hubsubid
