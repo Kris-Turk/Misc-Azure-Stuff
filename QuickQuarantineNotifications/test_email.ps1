@@ -1,6 +1,6 @@
-$smtpServer = "company-com.mail.protection.outlook.com"
-$smtpFrom = "sales@company.com"
-$smtpTo = "joe@company.com"
+$smtpServer = "kristurk-com.mail.protection.outlook.com"
+$smtpFrom = "orders@kristurk.com"
+$smtpTo = "sales@kristurk.com"
 $messageSubject = "Testing SPAM"
 $messageBody = "This is a test e-mail"
 

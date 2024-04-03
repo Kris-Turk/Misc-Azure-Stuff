@@ -1,11 +1,11 @@
 ## Pre-requisites ##
 # Have created a User assigned managed Identity (Have found system assigned to not work properly, seems to be a bug)
-$tenantId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-$managedIdentityName = "uai-test"
+$tenantId = "b7320893-0583-4126-a984-fc62c058ec4c"
+$managedIdentityName = "uai-sales-spam-notification"
 
 
 Connect-MgGraph -Scopes AppRoleAssignment.ReadWrite.All, Application.Read.All, RoleManagement.ReadWrite.Directory -TenantId $tenantId
-
+Connect-AzAccount -TenantId $tenantId
 
 
 ########## Grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online ########
