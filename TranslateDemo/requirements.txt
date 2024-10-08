@@ -1,0 +1,2 @@
+azure.ai.translation.text
+azure.identity
