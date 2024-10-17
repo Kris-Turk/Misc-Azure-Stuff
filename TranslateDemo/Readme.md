@@ -14,4 +14,4 @@ Before you begin, ensure you have the following:
 
 ## Demo Explainer Video
 
-[![You Explainer Video](https://i9.ytimg.com/vi/Qu02pChTYjA/maxresdefault.jpg?v=668df96d&sqp=CIjSlrgG&rs=AOn4CLDG16kD_E-3xqiN82pX3UuKE_frRA)](https://youtu.be/Qu02pChTYjA)
+[![You Explainer Video](https://i9.ytimg.com/vi_webp/egXmSItQR8Y/mqdefault_custom_1.webp?v=670fa07d&sqp=CPjjwbgG&rs=AOn4CLCl4a-XT2GLwLanzBobcLjbO25ouA)](https://youtu.be/egXmSItQR8Y)
