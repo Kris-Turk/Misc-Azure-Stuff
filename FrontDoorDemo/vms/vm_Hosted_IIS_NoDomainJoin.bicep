@@ -21,7 +21,7 @@ param backupPolicyName string
 param zones string
 
 // The URI of the PowerShell Custom Script.
-param virtualMachineExtensionCustomScriptUri string
+// param virtualMachineExtensionCustomScriptUri string
 
 // Variable Declarations
 var backupItemName  = 'vm;iaasvmcontainerv2;${resourceGroup().name};${virtualMachineName}'
@@ -158,24 +158,24 @@ module virtualMachineName_BackupIntent './modules/vmBackupModule.bicep' = {
   }
 }
 
-resource DefaultApps_r 'Microsoft.Compute/virtualMachines/extensions@2020-06-01' = {
-  parent: virtualMachine_r
-  name: 'DefaultApps'
-  location: location
-  properties: {
-    publisher: 'Microsoft.Compute'
-    type: 'CustomScriptExtension'
-    typeHandlerVersion: '1.10'
-    autoUpgradeMinorVersion: true
-    settings: {
-      fileUris: [
-        virtualMachineExtensionCustomScriptUri
-      ]
-      commandToExecute: 'powershell -ExecutionPolicy Unrestricted -File ./${last(split(virtualMachineExtensionCustomScriptUri, '/'))}'
-    }
-    protectedSettings: {}
-  }
-}
+// resource DefaultApps_r 'Microsoft.Compute/virtualMachines/extensions@2020-06-01' = {
+//   parent: virtualMachine_r
+//   name: 'DefaultApps'
+//   location: location
+//   properties: {
+//     publisher: 'Microsoft.Compute'
+//     type: 'CustomScriptExtension'
+//     typeHandlerVersion: '1.10'
+//     autoUpgradeMinorVersion: true
+//     settings: {
+//       fileUris: [
+//         virtualMachineExtensionCustomScriptUri
+//       ]
+//       commandToExecute: 'powershell -ExecutionPolicy Unrestricted -File ./${last(split(virtualMachineExtensionCustomScriptUri, '/'))}'
+//     }
+//     protectedSettings: {}
+//   }
+// }
 
 resource entraIdLogin_r 'Microsoft.Compute/virtualMachines/extensions@2018-10-01' = {
   name: 'AADLoginForWindows'
