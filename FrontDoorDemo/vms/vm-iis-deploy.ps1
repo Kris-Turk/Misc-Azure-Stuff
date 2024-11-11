@@ -38,7 +38,7 @@ $sku = "2022-datacenter-azure-edition-hotpatch"
 $zones = "2"
 
 
-$virtualMachineExtensionCustomScriptUri = "https://raw.githubusercontent.com/RR-CDSNZ/PublicScripts/main/scripts/Win%20Server%2022%20CIS%20L2_JAE_IIS_v03.ps1"
+$virtualMachineExtensionCustomScriptUri = ""
 
 
 #######################################################################################################################################
